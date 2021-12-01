@@ -9,9 +9,9 @@ This is an in-person workshop hosted at DAC-54.
 
 ## Organizers/Speakers:
 
-David Donofrio, John Leidel - Tactical Computing Laboratories 
-Anastasiia Butko - Lawrence Berkeley National Lab
-Jeffrey Young - Georgia Institute of Technology
+* David Donofrio, John Leidel - Tactical Computing Laboratories 
+* Anastasiia Butko - Lawrence Berkeley National Lab
+* Jeffrey Young - Georgia Institute of Technology
 
 ## Registration 
 How to register: [DAC-58 registration link](https://www.dac.com/Attend/Registration) 
@@ -31,7 +31,7 @@ How to register: [DAC-58 registration link](https://www.dac.com/Attend/Registrat
 * [assignment1](Exercises/assignment1.md) and [assignment2](Exercises/assignment2.md): adding simple hardware performance counters. 
 
 ## Discusson and Mailing List
-For tutorial's info please join vortex-dev@lists.gatech.edu 
+TBD
 
 ## Materials for the Hands-on portion 
 We'll be using the System Architect CoreGen repository [here](https://github.com/opensocsysarch/CoreGen) for the hands-on portion of this tutorial. 
