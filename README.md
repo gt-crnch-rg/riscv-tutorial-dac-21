@@ -2,10 +2,11 @@
 
 **Description:**
 
-This is an in-person workshop hosted at DAC-54.
+This is an in-person workshop hosted at DAC-54. The tutorial information can be found on the [official DAC page](https://58dac.conference-program.com/presentation/?id=TUT101&sess=sess326).
 
 
 ## Date: 2021-12-18 (10:30 AM - 12:00 PM PST)
+## Location: Room 3000, Moscone Center
 
 ## Organizers/Speakers:
 
