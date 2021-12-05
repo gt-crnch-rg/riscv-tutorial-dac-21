@@ -1,12 +1,10 @@
 
-## Vortex Virtual Machine Instructions
+## Virtual Machine Instructions
 For this tutorial, we provide access to a remote server with the tools as well as a virtual machine
-image that contains the prebuilt version of the tools as well as the Vortex git repo. This VM is
+image that contains the prebuilt version of the tools as well as the Coregen git repo. This VM is
 built using Vagrant with a VirtualBox Provider, which means that it should be easy to run on most platforms.
 
-We also provide the base Vagrantfile we use, although we note that setup may require some additional steps.
-See "Building Vortex from Scratch" for more details on setting up a new VM and/or a base installation of the
-tools.
+We also provide the base Vagrantfile we use if you would want to try and build your own image from scratch.
 
 ### Important note for Apple Macbook M1 users
 VirtualBox is not supported on M1 laptops and systems due to the switch from an x86 to aarch64 processor.
@@ -16,8 +14,7 @@ in the underlying Docker container. [Here](https://app.vagrantup.com/jeffnoxon/b
 is one possible Vagrant setup that could be investigated if you are interested.
 
 For this tutorial, we recommend using the remote server rather than the local VM if you only have local
-access to an M1 device.
-
+access to an M1 or similar device.
 
 ## VM Usage Instructions
 
@@ -26,34 +23,33 @@ on Linux and Windows 10 with Vagrant 2.2.18 and VirtualBox 6.1.26.
 
 ### Vagrant set up and initialization
 
-* [Vagrant Box with prebuilt toolchains and Vortex repo (1.5 GB)](https://gatech.app.box.com/s/6rdnn96glytc87sfehq8dnmd82e4q44y)
+* [Vagrant Box with prebuilt toolchains and Coregen repo (1.5 GB)](https://gatech.box.com/s/7cb39gs0jlokg8mh29khsnbteefhpqy7)
 * [Vagrantfile - place in the same folder as your .box file](Vagrantfile)
 
 #### Tutorial Setup - All Platforms
 Once you have booted your VM from the instructions below, you should follow these steps to prepare for the hands-on portion of the tutorial:
 
-* Source the `set_vortex_env.sh` script to set your paths
+* Source the `set_riscv_env.sh` script to set your paths
 * Proceed to the Exercises section of this repo.
 
 #### Windows Setup
 
-1) Download the Vortex Vagrant Box image ([from Box]()) and the updated Vagrantfile ([from this repo](Vagrantfile)) to your computer
-    * Note that the VM box image is **1.5 GB**, and it requires **4 GB of local disk space**.
+1) Download the tutorial Vagrant Box image ([from Box](https://gatech.box.com/s/7cb39gs0jlokg8mh29khsnbteefhpqy7)) and the updated Vagrantfile ([from this repo](Vagrantfile)) to your computer
+    * Note that the VM box image is **1.1 GB**, and it requires **4 GB of local disk space** and 2 CPU cores. 
     * The VagrantFile includes some tweaks to disable serial adapters which can cause a boot error.
     * If you need to increase/decrease the number of cores used by the VM, you can also make this change in the Vagrantfile. 
 
 2) Import the Vagrant Box image using the command-line and start the VM
 
 ```
-# We create a new local VM image from the vortex-ubuntu18 .box file and 
+# We create a new local VM image from the riscv-coregen-ubuntu2004 .box file and 
 # then initialize a Vagrantfile with `vagrant init`
 
-vagrant box add vortex-micro vortex-ubuntu18
-vagrant init vortex-micro
+v
 vagrant up
 ```
 
-Once it completes booting and returns back to the command prompt you can ssh into the VM.
+Once it completes booting and returns back to the command prompt you can ssh into the VM. Note that the images here are from a slightly different tutorial but the steps should be the same.
 
 ![Successful Boot Screen Win10](screenshots/windows/vagrant_tutorial_windows10_2.png)
 
@@ -88,7 +84,7 @@ Then you will follow the same steps as above for the Windows setup.
 # We create a new local VM image from the vortex-ubuntu18 .box file and 
 # then initialize a Vagrantfile with `vagrant init`
 
-vagrant box add vortex-micro vortex-ubuntu18
-vagrant init vortex-micro
+vagrant box add riscv-dac21 riscv-coregen-ubuntu2004.box
+vagrant init riscv-dac21
 vagrant up
 ```
