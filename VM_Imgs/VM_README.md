@@ -23,7 +23,7 @@ on Linux and Windows 10 with Vagrant 2.2.18 and VirtualBox 6.1.26.
 
 ### Vagrant set up and initialization
 
-* [Vagrant Box with prebuilt toolchains and Coregen repo (1.5 GB)](https://gatech.box.com/s/7cb39gs0jlokg8mh29khsnbteefhpqy7)
+* [Vagrant Box with prebuilt toolchains and Coregen repo (1.1 GB)](https://gatech.box.com/s/7cb39gs0jlokg8mh29khsnbteefhpqy7)
 * [Vagrantfile - place in the same folder as your .box file](Vagrantfile)
 
 #### Tutorial Setup - All Platforms
