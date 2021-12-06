@@ -24,11 +24,10 @@ How to register: [DAC-58 registration link](https://www.dac.com/Attend/Registrat
 |  Time | Contents  | Presenter   | Slides  | Notes  |
 |---|---|---|---|---|
 | 10:30-11:00 | Open-source Hardware / Software Co-design | David Donofrio  |   |   |
-| 11:00-11:20 | Hands-on Exercises | David Donofrio  |   |   |
+| 11:00-11:20 | Hands-on Exercises | John Leidel, Dave Donofrio  |   |   |
 | 11:20-11:40 | Open2C: Open-source Generator for Coherent Cache Memory Subsystem | David Donofrio | |
 | 11:40-12:00 | Novel RISC-V Implementations and Accelerators | Jeffrey Young | |
 | 12:00 | Wrap-up |  |  | 
-
 
 ## Hands-on Assignments 
 
