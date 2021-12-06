@@ -4,7 +4,7 @@ We have set up some temporary accounts for you to use the SystemArchitect CoreGe
 
 For this tutorial you will be assigned a tutorial user number 1-60, and you will use this to login. The password will be shared by the tutorial organizers for the tutorial.
 
-[spreadsheet with user assignments](https://docs.google.com/spreadsheets/d/1kKaTDKlUvEChkjIwmXQhoYt3sgRsrXwcGFrZ3khNDL4/edit?usp=sharing)
+[spreadsheet with user assignments and password to login](https://docs.google.com/spreadsheets/d/1kKaTDKlUvEChkjIwmXQhoYt3sgRsrXwcGFrZ3khNDL4/edit?usp=sharing)
 
 To login to the CRNCH server you will use the username **dac21_user|yournumber|** to log in to **hawksbill.crnch.gatech.edu**.
 
