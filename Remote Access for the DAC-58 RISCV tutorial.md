@@ -19,13 +19,7 @@ dac21_user2@hawksbill:~$
 
 ### Setting up the tutorial environment
 
-Each user account will have access to two scripts that they can use to set their paths. One of these will already be run for you as part of your .profile file. 
-
-```
-$ source ~/dac-tutorial-2021/set_vortex_env.sh
-```
-
-The other script will pull the latest copy of the Vortex repo and the tutorial repo into your home directory. 
+Each user account will have access to a few different scripts. To start, run this update script to pull the other tools and repos into your home directory.
 
 ```
 dac21_user2@hawksbill:~$ ~/dac-tutorial-2021/update_dac_tut_repos.sh  
