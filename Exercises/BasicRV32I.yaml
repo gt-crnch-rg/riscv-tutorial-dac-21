@@ -1,0 +1,1325 @@
+# -------------------------------------------------------
+# BasicRV32I.yaml
+#
+# CoreGen DAC 2021 Tutorial
+# Copyright 2021 Tactical Computing Laboratories, LLC
+#
+# Licensed under an Apache2 license
+# -------------------------------------------------------
+
+# -------------------------------------------------------
+# ProjectInfo Section
+# -------------------------------------------------------
+ProjectInfo:
+  - ProjectName: BasicRV32I
+    ProjectRoot: ./BasicV32I
+    ProjectType: soc
+    ChiselMajorVersion: 3
+    ChiselMinorVersion: 0
+
+
+# -------------------------------------------------------
+# Register Section
+# -------------------------------------------------------
+Registers:
+  - RegName: x0
+    Width: 32
+    Index: 0
+    PseudoName: zero 
+    IsFixedValue: true
+    FixedValue: 0
+    IsSIMD: false
+    RWReg: false
+    ROReg: true
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x1
+    Width: 32
+    Index: 1
+    PseudoName: ra
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x2
+    Width: 32
+    Index: 2
+    PseudoName: sp
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x3
+    Width: 32
+    Index: 3
+    PseudoName: gp
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x4
+    Width: 32
+    Index: 4
+    PseudoName: tp
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x5
+    Width: 32
+    Index: 5
+    PseudoName: t0
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x6
+    Width: 32
+    Index: 6
+    PseudoName: t1
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x7
+    Width: 32
+    Index: 7
+    PseudoName: t2
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x8
+    Width: 32
+    Index: 8
+    PseudoName: s0
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x9
+    Width: 32
+    Index: 9
+    PseudoName: s1
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x10
+    Width: 32
+    Index: 10
+    PseudoName: a0
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x11
+    Width: 32
+    Index: 11
+    PseudoName: a1
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x12
+    Width: 32
+    Index: 12
+    PseudoName: a2
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x13
+    Width: 32
+    Index: 13
+    PseudoName: a3
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x14
+    Width: 32
+    Index: 14
+    PseudoName: a4
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x15
+    Width: 32
+    Index: 15
+    PseudoName: a5
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x16
+    Width: 32
+    Index: 16
+    PseudoName: a6
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x17
+    Width: 32
+    Index: 17
+    PseudoName: a7
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x18
+    Width: 32
+    Index: 18
+    PseudoName: s2
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x19
+    Width: 32
+    Index: 19
+    PseudoName: s3
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x20
+    Width: 32
+    Index: 20
+    PseudoName: s4
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x21
+    Width: 32
+    Index: 21
+    PseudoName: s5
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x22
+    Width: 32
+    Index: 22
+    PseudoName: s6
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x23
+    Width: 32
+    Index: 23
+    PseudoName: s7
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x24
+    Width: 32
+    Index: 24
+    PseudoName: s8
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x25
+    Width: 32
+    Index: 25
+    PseudoName: s9
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x26
+    Width: 32
+    Index: 26
+    PseudoName: s10
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x27
+    Width: 32
+    Index: 27
+    PseudoName: s11
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x28
+    Width: 32
+    Index: 28
+    PseudoName: t3
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x29
+    Width: 32
+    Index: 29
+    PseudoName: t4
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x30
+    Width: 32
+    Index: 30
+    PseudoName: t5
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: x31
+    Width: 32
+    Index: 31
+    PseudoName: t6
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: true
+    ROReg: false
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+
+  - RegName: pc
+    Width: 32
+    Index: 32
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: false
+    ROReg: true
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    PCReg: true
+    Shared: false
+  - RegName: exc
+    Width: 32
+    Index: 33
+    IsFixedValue: false
+    IsSIMD: false
+    RWReg: false
+    ROReg: true
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: ne
+    Width: 32
+    Index: 34
+    IsFixedValue: true
+    FixedValue: 2
+    IsSIMD: false
+    RWReg: false
+    ROReg: true
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: eq
+    Width: 32
+    Index: 35
+    IsFixedValue: true
+    FixedValue: 3
+    IsSIMD: false
+    RWReg: false
+    ROReg: true
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: gt
+    Width: 32
+    Index: 36
+    IsFixedValue: true
+    FixedValue: 4
+    IsSIMD: false
+    RWReg: false
+    ROReg: true
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: lt
+    Width: 32
+    Index: 37
+    IsFixedValue: true
+    FixedValue: 5
+    IsSIMD: false
+    RWReg: false
+    ROReg: true
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: gte
+    Width: 32
+    Index: 38
+    IsFixedValue: true
+    FixedValue: 6
+    IsSIMD: false
+    RWReg: false
+    ROReg: true
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+  - RegName: lte
+    Width: 32
+    Index: 39
+    IsFixedValue: true
+    FixedValue: 7
+    IsSIMD: false
+    RWReg: false
+    ROReg: true
+    CSRReg: false
+    AMSReg: false
+    TUSReg: false
+    Shared: false
+
+# -------------------------------------------------------
+# Register Class Section
+# -------------------------------------------------------
+RegClasses:
+  - RegisterClassName: GPR
+    Registers:
+      - x0
+      - x1
+      - x2
+      - x3
+      - x4
+      - x5
+      - x6
+      - x7
+      - x8
+      - x9
+      - x10
+      - x11
+      - x12
+      - x13
+      - x14
+      - x15
+      - x16
+      - x17
+      - x18
+      - x19
+      - x20
+      - x21
+      - x22
+      - x23
+      - x24
+      - x25
+      - x26
+      - x27
+      - x28
+      - x29
+      - x30
+      - x31
+      - pc
+      - exc
+      - ne
+      - eq
+      - gt
+      - lt
+      - gte
+      - lte
+
+# -------------------------------------------------------
+# ISA Section
+# -------------------------------------------------------
+ISAs:
+  - ISAName: BasicRV32I.ISA
+
+
+# -------------------------------------------------------
+# Instruction Format Section
+# -------------------------------------------------------
+InstFormats:
+  - InstFormatName: R.if
+    ISA: BasicRV32I.ISA
+    FormatWidth: 32
+    Fields:
+      - FieldName: opc
+        FieldType: CGInstCode
+        FieldWidth: 7
+        StartBit: 0
+        EndBit: 6
+        MandatoryField: true
+      - FieldName: rd
+        FieldType: CGInstReg
+        FieldWidth: 5
+        StartBit: 7
+        EndBit: 11
+        MandatoryField: false
+        RegClass: GPR
+      - FieldName: funct3
+        FieldType: CGInstCode
+        FieldWidth: 3
+        StartBit: 12
+        EndBit: 14
+        MandatoryField: true
+      - FieldName: rs1
+        FieldType: CGInstReg
+        FieldWidth: 5
+        StartBit: 15
+        EndBit: 19
+        RegClass: GPR
+        MandatoryField: false
+      - FieldName: rs2
+        FieldType: CGInstReg
+        FieldWidth: 5
+        StartBit: 20
+        EndBit: 24
+        RegClass: GPR
+        MandatoryField: false
+      - FieldName: funct7
+        FieldType: CGInstCode
+        FieldWidth: 7
+        StartBit: 25
+        EndBit: 31
+        MandatoryField: false
+  - InstFormatName: I.if
+    ISA: BasicRV32I.ISA
+    FormatWidth: 32
+    Fields:
+      - FieldName: opc
+        FieldType: CGInstCode
+        FieldWidth: 7
+        StartBit: 0
+        EndBit: 6
+        MandatoryField: true
+      - FieldName: rd
+        FieldType: CGInstReg
+        FieldWidth: 5
+        StartBit: 7
+        EndBit: 11
+        MandatoryField: false
+        RegClass: GPR
+      - FieldName: funct3
+        FieldType: CGInstCode
+        FieldWidth: 3
+        StartBit: 12
+        EndBit: 14
+        MandatoryField: true
+      - FieldName: rs1
+        FieldType: CGInstReg
+        FieldWidth: 5
+        StartBit: 15
+        EndBit: 19
+        RegClass: GPR
+        MandatoryField: false
+      - FieldName: imm
+        FieldType: CGInstImm
+        FieldWidth: 12
+        StartBit: 20
+        EndBit: 31
+        MandatoryField: false
+  - InstFormatName: S.if
+    ISA: BasicRV32I.ISA
+    FormatWidth: 32
+    Fields:
+      - FieldName: opc
+        FieldType: CGInstCode
+        FieldWidth: 7
+        StartBit: 0
+        EndBit: 6
+        MandatoryField: true
+      - FieldName: imm5
+        FieldType: CGInstImm
+        FieldWidth: 5
+        StartBit: 7
+        EndBit: 11
+        MandatoryField: false
+      - FieldName: funct3
+        FieldType: CGInstCode
+        FieldWidth: 3
+        StartBit: 12
+        EndBit: 14
+        MandatoryField: true
+      - FieldName: rs1
+        FieldType: CGInstReg
+        FieldWidth: 5
+        StartBit: 15
+        EndBit: 19
+        RegClass: GPR
+        MandatoryField: false
+      - FieldName: rs2
+        FieldType: CGInstReg
+        FieldWidth: 5
+        StartBit: 20
+        EndBit: 24
+        RegClass: GPR
+        MandatoryField: false
+      - FieldName: imm7
+        FieldType: CGInstImm
+        FieldWidth: 7
+        StartBit: 25
+        EndBit: 31
+        MandatoryField: false
+  - InstFormatName: U.if
+    ISA: BasicRV32I.ISA
+    FormatWidth: 32
+    Fields:
+      - FieldName: opc
+        FieldType: CGInstCode
+        FieldWidth: 7
+        StartBit: 0
+        EndBit: 6
+        MandatoryField: true
+      - FieldName: rd
+        FieldType: CGInstReg
+        FieldWidth: 5
+        StartBit: 7
+        EndBit: 11
+        MandatoryField: false
+        RegClass: GPR
+      - FieldName: imm
+        FieldType: CGInstImm
+        FieldWidth: 20
+        StartBit: 12
+        EndBit: 31
+        MandatoryField: false
+  - InstFormatName: J.if
+    ISA: BasicRV32I.ISA
+    FormatWidth: 32
+    Fields:
+      - FieldName: opc
+        FieldType: CGInstCode
+        FieldWidth: 7
+        StartBit: 0
+        EndBit: 6
+        MandatoryField: true
+      - FieldName: rd
+        FieldType: CGInstReg
+        FieldWidth: 5
+        StartBit: 7
+        EndBit: 11
+        RegClass: GPR
+        MandatoryField: false
+      - FieldName: imm12
+        FieldType: CGInstImm
+        FieldWidth: 8
+        StartBit: 12
+        EndBit: 19
+        MandatoryField: false
+      - FieldName: imm11
+        FieldType: CGInstImm
+        FieldWidth: 1
+        StartBit: 20
+        EndBit: 21
+        MandatoryField: false
+      - FieldName: imm1
+        FieldType: CGInstImm
+        FieldWidth: 10
+        StartBit: 22
+        EndBit: 30
+        MandatoryField: false
+      - FieldName: imm20
+        FieldType: CGInstImm
+        FieldWidth: 1
+        StartBit: 31
+        EndBit: 31
+        MandatoryField: false
+
+
+# -------------------------------------------------------
+# Instruction Section
+# -------------------------------------------------------
+Insts:
+# -- Integer Arithmetic
+  - Inst: add
+    ISA: BasicRV32I.ISA
+    InstFormat: R.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 51 #00110011b
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 0
+      - EncodingField: funct7
+        EncodingWidth: 7
+        EncodingValue: 0
+    Impl: rd = rs1 + rs2
+  - Inst: addi
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 19 #00010011b
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 0
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: rd = rs1 + imm
+  - Inst: sub
+    ISA: BasicRV32I.ISA
+    InstFormat: R.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 51
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 0
+      - EncodingField: funct7
+        EncodingWidth: 7
+        EncodingValue: 32
+    Impl: rd = rs1 - rs2
+  - Inst: sll
+    ISA: BasicRV32I.ISA
+    InstFormat: R.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 51
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 1
+      - EncodingField: funct7
+        EncodingWidth: 7
+        EncodingValue: 0
+    Impl: rd = rs1 << rs2
+  - Inst: srl
+    ISA: BasicRV32I.ISA
+    InstFormat: R.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 51
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 5
+      - EncodingField: funct7
+        EncodingWidth: 7
+        EncodingValue: 0
+    Impl: rd = rs1 >> rs2
+  - Inst: sra
+    ISA: BasicRV32I.ISA
+    InstFormat: R.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 51
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 5
+      - EncodingField: funct7
+        EncodingWidth: 7
+        EncodingValue: 32
+    Impl: rd = rs1 >> rs2
+  - Inst: slli
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 19
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 1
+    Impl: rd = rs1 << (imm & 17)
+  - Inst: srli
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 19
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 5
+    Impl: rd = rs1 >> (imm & 17)
+  - Inst: srai
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 19
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 5
+    Impl: rd = rs1 >> (imm & 17)
+  - Inst: and
+    ISA: BasicRV32I.ISA
+    InstFormat: R.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 51
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 7
+      - EncodingField: funct7
+        EncodingWidth: 7
+        EncodingValue: 0
+    Impl: rd = rs1 & rs2
+  - Inst: andi
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 19
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 7
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: rd = rs1 & imm
+  - Inst: or
+    ISA: BasicRV32I.ISA
+    InstFormat: R.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 51
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 6
+      - EncodingField: funct7
+        EncodingWidth: 7
+        EncodingValue: 0
+    Impl: rd = rs1 | rs2
+  - Inst: ori
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 19
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 6
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: rd = rs1 | imm
+  - Inst: xor
+    ISA: BasicRV32I.ISA
+    InstFormat: R.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 51
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 4
+      - EncodingField: funct7
+        EncodingWidth: 7
+        EncodingValue: 0
+    Impl: rd = rs1 ^ rs2
+  - Inst: xori
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 19
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 4
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: rd = rs1 ^ imm
+  - Inst: slt
+    ISA: BasicRV32I.ISA
+    InstFormat: R.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 51
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 2
+      - EncodingField: funct7
+        EncodingWidth: 7
+        EncodingValue: 0
+    Impl: if( rs1 < rs2){ rd = 1 }else{ rd = 0 }
+  - Inst: slti
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 19
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 2
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: if( rs1 < imm){ rd = 1 }else{ rd = 0 }
+  - Inst: sltu
+    ISA: BasicRV32I.ISA
+    InstFormat: R.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 51
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 3
+      - EncodingField: funct7
+        EncodingWidth: 7
+        EncodingValue: 0
+    Impl: if( rs1 < rs2){ rd = 1 }else{ rd = 0 } #check special case of SLTU, rd, x0, rs2
+  - Inst: sltiu
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 7
+        EncodingValue: 19
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 3
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: if( rs1 < imm){ rd = 1 }else{ rd = 0 } 
+
+# -- Memory I/O
+  - Inst: lb
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 3
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 0
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: rd = SEXT(LOADELEM(rs1+imm,8),7)
+  - Inst: lh
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 3
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 1
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: rd = SEXT(LOADELEM(rs1+imm,16),15)
+  - Inst: lw
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 3
+      - EncodingField: funct3
+        EncodingWidth: 5
+        EncodingValue: 2
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: rd = SEXT(LOADELEM(rs1+imm,32),31)
+  - Inst: sb
+    ISA: BasicRV32I.ISA
+    InstFormat: S.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 35
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 0
+    Impl: STOREELEM(rs1,rd+((imm5 | (imm7 << 5))),8)
+  - Inst: sh
+    ISA: BasicRV32I.ISA
+    InstFormat: S.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 35
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 1
+    Impl: STOREELEM(rs1,rd+((imm5 | (imm7 << 5))),16)
+  - Inst: sw
+    ISA: BasicRV32I.ISA
+    InstFormat: S.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 35
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 2
+    Impl: STOREELEM(rs1,rd+((imm5 | (imm7 << 5))),32)
+  - Inst: lbu
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 3
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 4
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: rd = ZEXT(LOADELEM(rs1+imm,8), 7)
+  - Inst: lhu
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 3
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 5
+      - EncodingField: imm
+        EncodingWidth: 12
+        EncodingValue: 0
+    Impl: rd = ZEXT(LOADELEM(rs1+imm,16), 15)
+  - Inst: lui
+    ISA: BasicRV32I.ISA
+    InstFormat: U.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 55
+      - EncodingField: imm
+        EncodingWidth: 20
+        EncodingValue: 0
+    Impl: rd = (imm << 11) & 4294963200
+
+
+# -- Conditional Branches
+  - Inst: beq
+    ISA: BasicRV32I.ISA
+    InstFormat: S.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 99
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 0
+    Impl: |
+          u32 offset
+          if( rs1 == rs2 ){ 
+                          offset = ((imm5 & 15) | ( (imm7 & 63) << 5) | ( (imm5 & 128) << 11) | (( imm7 & 64) << 12)) << 1
+                        }else{ 
+                          offset = pc + 4 
+                        }
+                        pc = pc + SEXT(offset,13)
+  - Inst: auipc
+    ISA: BasicRV32I.ISA
+    InstFormat: U.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 23
+      - EncodingField: imm
+        EncodingWidth: 20
+        EncodingValue: 0
+    Impl: rd = ((imm << 11) & 4294963200)+pc
+  - Inst: bne
+    ISA: BasicRV32I.ISA
+    InstFormat: S.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 99
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 1
+    Impl: |
+          u32 offset
+          if( rs1 != rs2 ){ 
+                          offset =  ((imm5 & 15) | ( (imm7 & 63) << 5) | ( (imm5 & 128) << 11) | (( imm7 & 64) << 12)) << 1
+                        }else{ 
+                          offset  = pc + 4 
+                        }
+                        pc = pc + SEXT(offset,13)
+  - Inst: blt
+    ISA: BasicRV32I.ISA
+    InstFormat: S.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 99
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 4
+    Impl: |
+          u32 offset
+          if( rs1 < rs2 ){ 
+                          offset = ((imm5 & 15) | ( (imm7 & 63) << 5) | ( (imm5 & 128) << 11) | (( imm7 & 64) << 12)) << 1
+                        }else{ 
+                          offset = pc + 4 
+                        }
+                        pc = pc + SEXT(offset,13)
+  - Inst: bge
+    ISA: BasicRV32I.ISA
+    InstFormat: S.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 99
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 5
+    Impl: |
+          u32 offset
+          if( rs1 >= rs2 ){ 
+                          offset = ((imm5 & 15) | ( (imm7 & 63) << 5) | ( (imm5 & 128) << 11) | (( imm7 & 64) << 12)) << 1
+                        }else{ 
+                          offset = pc + 4 
+                        }
+                        pc = pc + SEXT(offset,13)
+  - Inst: bltu
+    ISA: BasicRV32I.ISA
+    InstFormat: S.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 99
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 6
+    Impl: |
+          u32 offset
+          if( rs1 < rs2 ){ 
+                          offset = ((imm5 & 15) | ( (imm7 & 63) << 5) | ( (imm5 & 128) << 11) | (( imm7 & 64) << 12)) << 1
+                        }else{ 
+                          offset = pc + 4 
+                        }
+                        pc = pc + SEXT(offset,13)
+  - Inst: bgeu
+    ISA: BasicRV32I.ISA
+    InstFormat: S.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 99
+      - EncodingField: funct3
+        EncodingWidth: 3
+        EncodingValue: 7
+    Impl: |
+          u32 offset
+          if( rs1 >= rs2 ){ 
+                          offset = ((imm5 & 15) | ( (imm7 & 63) << 5) | ( (imm5 & 128) << 11) | (( imm7 & 64) << 12)) << 1
+                        }else{ 
+                          offset = pc + 4 
+                        }
+                        pc = pc + SEXT(offset,14)
+  - Inst: jal
+    ISA: BasicRV32I.ISA
+    InstFormat: J.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 111
+    Impl: | 
+          rd = pc + 4
+          pc = SEXT( (((imm20 << 20) | (imm12 << 12) | (imm11 << 11) | (imm1 << 10)) << 1),19 )
+  - Inst: jalr
+    ISA: BasicRV32I.ISA
+    InstFormat: I.if
+    Encodings:
+      - EncodingField: opc
+        EncodingWidth: 5
+        EncodingValue: 103
+      - EncodingField: funct3
+        EncodingWidth: 5
+        EncodingValue: 0
+    Impl: |
+          rd = pc + 4
+          pc = (SEXT(imm, 12) + rs1) & 4294967294
+
+
+# -------------------------------------------------------
+# Pseudo Instruction Section
+# -------------------------------------------------------
+#PseudoInsts:
+#  - PseudoInst: mov
+#    ISA: BasicRISC.ISA
+#    Inst: add
+#    Encodings:
+#      - EncodingField: ra
+#        EncodingWidth: 5
+#        EncodingValue: 0
+#  - PseudoInst: movcg
+#    ISA: BasicRISC.ISA
+#    Inst: cadd
+#    Encodings:
+#      - EncodingField: ra
+#        EncodingWidth: 5
+#        EncodingValue: 0
+#  - PseudoInst: movgc
+#    ISA: BasicRISC.ISA
+#    Inst: cadd
+#    Encodings:
+#      - EncodingField: ra
+#        EncodingWidth: 5
+#        EncodingValue: 0
+
+# -------------------------------------------------------
+# Cache Section
+# -------------------------------------------------------
+Caches:
+  - Cache: Core0.L1.cache
+    Sets: 2
+    Ways: 8
+
+# -------------------------------------------------------
+# Core Section
+# -------------------------------------------------------
+Cores:
+  - Core: core0
+    ThreadUnits: 1
+    Cache: Core0.L1.cache
+    ISA: BasicRV32I.ISA
+    RegisterClasses:
+      - RegClass: GPR
+
+Socs:
+  - Soc: RV32ISoC
+    Cores:
+      - Core: core0
