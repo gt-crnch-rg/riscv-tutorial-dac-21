@@ -23,15 +23,14 @@ How to register: [DAC-58 registration link](https://www.dac.com/Attend/Registrat
 
 |  Time | Contents  | Presenter   | Slides  | Notes  |
 |---|---|---|---|---|
-| 10:30-10:40 |  | David Donofrio  | [slides0](  |   |
-| 11:50 - 12:00 | Conclusions & Discussions |  Jeffrey Young |  | 
-
+| 10:30-11:00 | Open-source Hardware / Software Co-design | David Donofrio  |   |   |
+| 11:00-11:20 | Hands-on Exercises | John Leidel, Dave Donofrio  |   |   |
+| 11:20-11:40 | Open2C: Open-source Generator for Coherent Cache Memory Subsystem | David Donofrio | |
+| 11:40-12:00 | Novel RISC-V Implementations and Accelerators | Jeffrey Young | |
+| 12:00 | Wrap-up |  |  | 
 
 ## Hands-on Assignments 
 
-* [assignment1](Exercises/assignment1.md) and [assignment2](Exercises/assignment2.md): adding simple hardware performance counters. 
-
-## Discusson and Mailing List
 TBD
 
 ## Materials for the Hands-on portion 
@@ -43,7 +42,7 @@ We'll be using the System Architect CoreGen repository [here](https://github.com
 
 VM Access (Optional): Please see the ["VM README"](VM_Imgs/VM_README.md) to get instructions for downloading and running the System Architect tools using Vagrant and VirtualBox. 
 
-For remote account access, please see [this page](Remote%20Access%20for%20the%20MICRO-54%20Vortex%20GPGPU%20tutorial.md). If you'd like a longer-term account to work with Vortex and the tools on a remote testbed, please [request an account for the Rogues Gallery testbed here](https://crnch-rg.cc.gatech.edu/request-access/).
+For remote account access, please see [this page](Remote%20Access%20for%20the%20MICRO-54%20Vortex%20GPGPU%20tutorial.md). If you'd like a longer-term account to work with Coregen and the tools on a remote testbed, please [request an account for the CRNCH Rogues Gallery testbed here](https://crnch-rg.cc.gatech.edu/request-access/).
 
 ## Relevant Repos 
 * [CoreGen](https://github.com/opensocsysarch/CoreGen) 
