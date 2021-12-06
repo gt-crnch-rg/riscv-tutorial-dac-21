@@ -26,9 +26,11 @@ dac21_user2@hawksbill:~$ ~/dac-tutorial-2021/update_dac_tut_repos.sh
 Updating a local copy of the CoreGen repo and the tutorial repo
 
 dac21_user2@hawksbill:~$ ls
-CoreGen  
-dac-tutorial-2021  
-riscv-tutorial-dac-21
+build_coregen_from_repo.sh  //A script that runs cmake, make, and make install to create a local install of Coregen
+CoreGen                     //A copy of the CoreGen repo
+dac-tutorial-2021           //Symlink to the tutorial master folder; you should need to do anything with this!
+riscv-tutorial-dac-21       //Use the .yaml file under Exercises for the hands-on portion.
+set_tut_env_precompiled.sh  //source this script if you want to skip building CoreGen
 ```
 
 Once you have run this script, you can proceed to the hands-on exercises for the tutorial.
