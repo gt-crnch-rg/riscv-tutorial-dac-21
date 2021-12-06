@@ -63,3 +63,15 @@ LD_LIBRARY_PATH = /netscratch/dac-tutorial-2021/coregen-install/lib/
 dac21_user1@hawksbill:~$ which cgcli
 /netscratch/dac-tutorial-2021/coregen-install/bin/cgcli
 ```
+
+
+### DAC Tutorial Exercises
+We will be using the BasicRV32I.yaml file shared in the Exercises folder of this repo. On the remote server you can switch directories to a copy of this directory and then run the hands-on commands.
+
+```
+dac21_user1@hawksbill:~$cd ~/cd riscv-tutorial-dac-21/Exercises/
+dac21_user1@hawksbill:~$ ls
+BasicRV32I.yaml
+#Proceed to run cgcli commands for the hands-on portion of the tutorial!
+```
+
