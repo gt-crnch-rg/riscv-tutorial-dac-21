@@ -45,7 +45,9 @@ Once you have booted your VM from the instructions below, you should follow thes
 # We create a new local VM image from the riscv-coregen-ubuntu2004 .box file and 
 # then initialize a Vagrantfile with `vagrant init`
 
-v
+vagrant box add riscv-dac21 riscv-coregen-ubuntu2004.box
+#Initialize your local environment
+vagrant init riscv-dac21
 vagrant up
 ```
 
