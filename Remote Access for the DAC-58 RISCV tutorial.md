@@ -1,23 +1,10 @@
 ## Remote Access for the DAC 2021 tutorial
 
-We have set up some temporary accounts for you to use the SystemArchitect CoreGen toolchain on the CRNCH Rogues Gallery at Georgia Tech. If you are interested to work with SystemArchitect longer-term, you can request an account via our [CRNCH RG webpage](https://crnch-rg.cc.gatech.edu/request-access/).
+**NOTE:** These instructions are just provided for informational purposes. They will not work without an active testbed account!
 
-For this tutorial you will be assigned a tutorial user number 1-60, and you will use this to login. The password will be shared by the tutorial organizers for the tutorial.
+We set up some temporary accounts for you to use the SystemArchitect CoreGen toolchain on the CRNCH Rogues Gallery at Georgia Tech. If you are interested to work with SystemArchitect longer-term, you can request an account via our [CRNCH RG webpage](https://crnch-rg.cc.gatech.edu/request-access/).
 
-[spreadsheet with user assignments and password to login](https://docs.google.com/spreadsheets/d/1kKaTDKlUvEChkjIwmXQhoYt3sgRsrXwcGFrZ3khNDL4/edit?usp=sharing)
-
-To login to the CRNCH server you will use the username **dac21_user|yournumber|** to log in to **hawksbill.crnch.gatech.edu**.
-
-```
-$ ssh dac21_user2@hawksbill.crnch.gatech.edu
-dac21_user2@hawksbill.crnch.gatech.edu's password:
-Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-88-generic x86_64)
-
-  System information as of Mon 18 Oct 2021 01:52:33 AM UTC
-...
-...
-dac21_user2@hawksbill:~$
-```
+Users logged into the CRNCH server hawksbill for this tutorial. 
 
 ### Setting up the tutorial environment
 
