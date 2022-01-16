@@ -23,10 +23,10 @@ How to register: [DAC-58 registration link](https://www.dac.com/Attend/Registrat
 
 |  Time | Contents  | Presenter   | Slides  | Notes  |
 |---|---|---|---|---|
-| 10:30-11:00 | Open-source Hardware / Software Co-design | David Donofrio  |   |   |
+| 10:30-11:00 | Open-source Hardware / Software Co-design | David Donofrio  | [Slides](https://github.com/gt-crnch-rg/riscv-tutorial-dac-21/blob/main/Slides/DAC58%20-%20Closing%20the%20HW-SW%20Codesign%20Loop%20-%20Opensource%20HW%20SW%20Codesign.pdf)  |   |
 | 11:00-11:20 | Hands-on Exercises | John Leidel, Dave Donofrio  |   |   |
-| 11:20-11:40 | Open2C: Open-source Generator for Coherent Cache Memory Subsystem | David Donofrio | |
-| 11:40-12:00 | Novel RISC-V Implementations and Accelerators | Jeffrey Young | |
+| 11:20-11:40 | Open2C: Open-source Generator for Coherent Cache Memory Subsystem | David Donofrio |[Slides](https://github.com/gt-crnch-rg/riscv-tutorial-dac-21/blob/main/Slides/DAC58%20-%20Closing%20the%20HW-SW%20Codesign%20Loop%20-%20Open2C.pdf) | Research by Anastasiia Butko and colleagues |
+| 11:40-12:00 | Novel RISC-V Implementations and Accelerators | Jeffrey Young | [Slides](https://github.com/gt-crnch-rg/riscv-tutorial-dac-21/blob/main/Slides/DAC58%20-%20Closing%20the%20HW-SW%20Codesign%20Loop%20-%20Novel%20RISCV%20Implementations.pdf) | |
 | 12:00 | Wrap-up |  |  | 
 
 ## Materials for the Hands-on portion 
